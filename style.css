@@ -1,0 +1,257 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Body & fonts */
+body {
+    background-color: #2d2d2d; /* Matte black */
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 25px 60px;  /* exact same as homepage */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo a { 
+    font-size: 18px; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 400; 
+}
+nav {
+    display: flex;
+    gap: 30px; /* ensures same spacing between links on all pages */
+}
+nav a {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 0; /* remove any extra padding that can shift links */
+}
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:1px;
+    background:white;
+}
+
+/* Hero */
+.hero { min-height:90vh; display:flex; justify-content:center; align-items:center; gap:80px; padding:0 60px; }
+.hero-text { max-width:500px; }
+.hero h1 { font-family:Cochin,"Times New Roman",serif; font-size:48px; font-weight:700; margin-bottom:10px; background:linear-gradient(90deg,#fff2c3,#ffb700); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+.hero h2 { font-family:'Libre Baskerville', serif; font-size:22px; font-weight:400; margin-bottom:20px; background:linear-gradient(90deg,#fff5d3,#eed38e); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+.hero p { font-size:14px; font-weight:300; color:#cccccc; line-height:1.6; }
+.hero-image img { width: 420px; height:600px; object-fit:cover; border-radius:18px; }
+
+/* Divider */
+.divider { width: 90%; height:0.5px; background:rgb(237, 216, 94); margin:5px auto 0; margin-bottom: 15px; }
+
+/* CAROUSEL */
+.carousel { position: relative; width:100%; height:75vh; overflow:hidden; margin-top:0px; }
+.carousel img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 0.8s ease-in-out; }
+.carousel img.active { opacity:1; z-index:1; }
+/* Carousel Arrows Fix */
+/* Carousel Arrows — small black arrows in tiny translucent white squares */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* tiny translucent white square */
+    color: black; /* arrow itself */
+    font-size: 18px; /* small arrow size */
+    font-weight: 300; /* thin */
+    width: 28px;  /* square width */
+    height: 28px; /* square height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 10;
+    border: none;
+    border-radius: 4px; /* slightly rounded corners for softness */
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1); /* subtle hover scale */
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* MINI GALLERY */
+.mini-gallery { background-color:#1A1A1B; padding:20px 0; }
+.gallery-title { font-family:'Libre Baskerville', serif; font-size:50px; font-weight:500; margin:0 0 30px 60px; opacity:0.8; padding-bottom: 30px; padding-top: 50px;}
+.gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; padding:0 60px; }
+.gallery-grid img { width:100%; height:350px; object-fit:cover; border-radius:14px; transition: transform 0.3s ease; }
+.gallery-grid img:hover { transform:scale(1.03); }
+.gallery-quote { font-family:'Inter',sans-serif; font-size:20px; font-weight:450; font-style:italic; color:#e5e5e5; text-align:center; margin:25px 60px 0; padding-bottom: 100px; padding-top: 100px; }
+
+/* FINAL SECTION */
+.final-section { background-color:#A66D4F; padding:40px 0; text-align:center; padding-top: 0px; }
+.final-image img { width:100%; height:75vh; object-fit:cover; margin-bottom:20px; }
+.final-divider { width:90%; height:0.5px; background:black; margin:5px auto; }
+.final-logo { font-family:'Libre Baskerville', serif; font-weight:400; font-size:40px; margin-top:5px; color:black; text-align:center; padding-top: 30px;}
+
+
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* full page minus header */
+    background-color: #d3d3d3; /* light grey */
+}
+
+.coming-soon {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #2d2d2d;
+    text-align: center;
+}
+
+/* ====== MOBILE / RESPONSIVE STYLES ====== */
+@media (max-width: 1024px) {
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+        min-height: auto;
+    }
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    .hero-text h2 {
+        font-size: 18px;
+    }
+    .hero-text p {
+        font-size: 14px;
+    }
+    .hero-image img {
+        width: 80%;
+        height: auto;
+        max-height: 500px;
+    }
+
+    /* Carousel */
+    .carousel {
+        height: 50vh;
+    }
+    .carousel img {
+        height: 100%;
+    }
+
+    /* Mini Gallery */
+    .gallery-title {
+        font-size: 40px;
+        padding-left: 20px;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+    .gallery-grid img {
+        height: 200px;
+    }
+    .gallery-quote {
+        padding: 50px 20px 50px 20px;
+        font-size: 16px;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    nav {
+        gap: 15px;
+    }
+
+    /* Final Section */
+    .final-image img {
+        height: 50vh;
+    }
+    .final-logo {
+        font-size: 28px;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero */
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    .hero-text h2 {
+        font-size: 16px;
+    }
+    .hero-image img {
+        width: 90%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    /* Mini Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 10px;
+    }
+    .gallery-grid img {
+        height: 180px;
+    }
+    .gallery-title {
+        font-size: 32px;
+    }
+    .gallery-quote {
+        font-size: 14px;
+        padding: 40px 15px 40px 15px;
+    }
+
+    /* Carousel Arrows */
+    .arrow {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+    }
+
+    /* Header */
+    .logo a {
+        font-size: 16px;
+    }
+    nav a {
+        font-size: 12px;
+    }
+
+    /* Final Section */
+    .final-image img {
+        height: 40vh;
+    }
+    .final-logo {
+        font-size: 24px;
+    }
+}

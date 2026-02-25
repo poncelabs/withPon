@@ -1,0 +1,16 @@
+header {
+    width: 100%;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    gap: 30px; /* spacing between Home and Contact */
+}
