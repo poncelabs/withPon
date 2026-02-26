@@ -3,7 +3,7 @@
 
 /* Body & fonts */
 body {
-    background-color: #2d2d2d; /* Matte black */
+    background-color: #fdfcf1; /* Matte black */
     font-family: 'Inter', sans-serif;
     color: white;
 }
@@ -19,10 +19,11 @@ header {
 
 
 .logo a { 
-    font-size: 18px; 
-    color: white; 
+    font-size: 25px; 
+    color: rgb(0, 0, 0); 
     text-decoration: none; 
     font-weight: 400; 
+    font-family:'Libre Baskerville', serif;
 }
 nav {
     display: flex;
@@ -32,7 +33,7 @@ nav a {
     font-size: 14px;
     font-weight: 300;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     position: relative;
     padding: 0; /* remove any extra padding that can shift links */
 }
@@ -43,19 +44,19 @@ nav a.active::after {
     bottom:-6px;
     width:100%;
     height:1px;
-    background:white;
+    background:rgb(0, 0, 0);
 }
 
 /* Hero */
 .hero { min-height:90vh; display:flex; justify-content:center; align-items:center; gap:80px; padding:0 60px; }
 .hero-text { max-width:500px; }
-.hero h1 { font-family:Cochin,"Times New Roman",serif; font-size:48px; font-weight:700; margin-bottom:10px; background:linear-gradient(90deg,#fff2c3,#ffb700); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
-.hero h2 { font-family:'Libre Baskerville', serif; font-size:22px; font-weight:400; margin-bottom:20px; background:linear-gradient(90deg,#fff5d3,#eed38e); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
-.hero p { font-size:14px; font-weight:300; color:#cccccc; line-height:1.6; }
+.hero h1 { font-family:Cochin,"Times New Roman",serif; font-size:48px; font-weight:700; margin-bottom:10px; background:linear-gradient(90deg,#161616,#d6d0c5); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+.hero h2 { font-family:'Libre Baskerville', serif; font-size:22px; font-weight:400; margin-bottom:20px; background:linear-gradient(90deg,#f0ac2d,#eed38e); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+.hero p { font-size:14px; font-weight:300; color:#282828; line-height:1.6; }
 .hero-image img { width: 420px; height:600px; object-fit:cover; border-radius:18px; }
 
 /* Divider */
-.divider { width: 90%; height:0.5px; background:rgb(237, 216, 94); margin:5px auto 0; margin-bottom: 15px; }
+.divider { width: 90%; height:0.9px; background:rgb(235, 203, 140); margin:5px auto 0; margin-bottom: 15px; }
 
 /* CAROUSEL */
 .carousel { position: relative; width:100%; height:75vh; overflow:hidden; margin-top:0px; }
