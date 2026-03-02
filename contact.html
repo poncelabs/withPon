@@ -8,10 +8,13 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="contact-body">
 
-<header>
+<div class="glass-panel"></div>
+
+<header class="contact-header">
     <div class="logo">
         <a href="index.html">withPon</a>
     </div>
@@ -22,9 +25,60 @@
     </nav>
 </header>
 
-<main class="contact-main">
-    <p class="coming-soon">Coming soon</p>
-</main>
+<main class="contact-container">
+    <div class="form-wrapper">
 
+
+    <h2 class="contact-title">
+        Built for brands with direction,<br>
+        and built for photographers with ambition.<br>
+        This is where clarity begins.
+    </h2>
+
+    <form action="https://formsubmit.co/poncedanielle69@gmail.com" method="POST">
+
+        <!-- Prevent Spam -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="name-row">
+            <div class="input-group">
+                <label>First Name (required)</label>
+                <input type="text" name="First Name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Last Name (required)</label>
+                <input type="text" name="Last Name" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Email (required)</label>
+            <input type="email" name="Email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Message (required)</label>
+            <textarea name="Message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">Send</button>
+
+    </form>
+
+    
+</div>
+</main>
+<div class="page-contact">
+    <a href="mailto:poncedanielle69@gmail.com" class="email">
+        poncedanielle69@gmail.com
+    </a>
+
+    <a href="tel:+97455366332" class="phone">
+        (+974) 55366332
+    </a>
+</div>
+
+</div>
 </body>
 </html>
